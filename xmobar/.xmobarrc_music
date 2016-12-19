@@ -1,0 +1,25 @@
+--XMobar For Music
+Config { 
+       -- Appearance
+         font         = "xft:Fugaz One:size=10"
+       , bgColor      = "black"
+       , fgColor      = "grey"
+-- 1 Screen     , position     = Static { xpos = 0, ypos = 1175, width = 1920, height = 25 }
+-- 2 Screens    , position     = Static { xpos = 1280, ypos = 1175, width = 1920, height = 25 }
+       , position     = Static { xpos = [X], ypos = 1175, width = 1920, height = 25 }
+       , border       = FullB
+       , borderColor  =  "yellow"
+       , commands     = [ 
+                         Run MPD [
+                             "-t", "[<fc=red><state></fc>] [<fc=orange><remaining></fc>](<ppos>/<plength>) [<fc=green><artist></fc>] <title> (<fc=green><album></fc>) <date>                                  <statei>"
+                           , "--"
+                           , "-P", "<action=`mpc --no-status prev`><icon=/home/nestorock/.xmonad/icons/EZ-Previous-icon_24x24.xpm/></action><action=`mpc --no-status pause`><icon=/home/nestorock/.xmonad/icons/EZ-Play-icon_24x24.xpm/></action><action=`mpc --no-status next`><icon=/home/nestorock/.xmonad/icons/EZ-Next-icon_24x24.xpm/></action>"
+                           , "-Z", "<action=`mpc --no-status prev`><icon=/home/nestorock/.xmonad/icons/EZ-Previous-icon_24x24.xpm/></action><action=`mpc --no-status play`><icon=/home/nestorock/.xmonad/icons/EZ-Pause-icon_24x24.xpm/></action><action=`mpc --no-status next`><icon=/home/nestorock/.xmonad/icons/EZ-Next-icon_24x24.xpm/></action>"
+                           , "-S", "<action=`mpc --no-status prev`><icon=/home/nestorock/.xmonad/icons/EZ-Previous-icon_24x24.xpm/></action><action=`mpc --no-status play`><icon=/home/nestorock/.xmonad/icons/EZ-Stop-icon_24x24.xpm/></action><action=`mpc --no-status next`><icon=/home/nestorock/.xmonad/icons/EZ-Next-icon_24x24.xpm/></action>" 
+                                 ] 10
+                        ]
+       , sepChar      = "%"
+       , alignSep     = "}{"
+       , template     = "* } {<fc=yellow> %mpd% </fc> *"
+       }
+
