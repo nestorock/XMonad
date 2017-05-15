@@ -39,5 +39,5 @@ XMonad Configuration (with Two Screens)
                  
 
 
-![Image of Yaktocat](https://pbs.twimg.com/profile_images/460511484993622016/6hmeNPzF_reasonably_small.jpeg)
+![Image of Yaktocat](https://github.com/nestorock/XMonad/blob/master/images/UnderConstruction.jpg)
 
